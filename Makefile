@@ -1,6 +1,6 @@
 MAKEFLAGS = --warn-undefined-variables
 
-SRC = dc.py
+SRC = src/dining_cryptographers/main.py
 TEST = test.py
 
 export PIP_DISABLE_PIP_VERSION_CHECK=1
@@ -10,7 +10,7 @@ tags: $(SRC) $(TEST)
 
 .PHONY: test
 test:
-	@python -m unittest --buffer
+	@python -m unittest
 
 coverage: $(SRC) $(TEST)
 	@coverage run --branch --concurrency=thread --omit=venv/* $(TEST)
@@ -28,7 +28,8 @@ flake8:
 
 .PHONY: typecheck
 typecheck:
-	@mypy $(SRC) $(TEST)
+	@mypy $(SRC)
+	@mypy $(TEST)
 
 .PHONY: clean
 clean:

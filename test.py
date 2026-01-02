@@ -3,7 +3,10 @@
 
 import unittest
 
-import dc
+try:
+    import src.dining_cryptographers as dc
+except ModuleNotFoundError:
+    import dining_cryptographers as dc  # type: ignore[no-redef, import-not-found]
 
 N = 5
 

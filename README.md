@@ -8,7 +8,7 @@ This simulates the protocol described in [`doi:10.1007/BF00206326`](https://doi.
 
 ### As a Command
 
-Execute `./dc.py` to run a simulation with a fixed number and payer.
+Execute `dc` to run a simulation with a fixed number and payer.
 
 ### As a Library
 
