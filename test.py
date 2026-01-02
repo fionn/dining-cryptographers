@@ -12,7 +12,7 @@ class TestDiningCryptographers(unittest.TestCase):
 
     def test_consistent_secrets(self) -> None:
         """Cryptographers agree on shared secrets"""
-        cryptographers = [dc.Cryptographer(i) for i in range(N)]
+        cryptographers = [dc.Cryptographer() for i in range(N)]
         for i in range(N):
             dc.establish_shared_secret(cryptographers[i],
                                        cryptographers[(i + 1) % N])

@@ -9,7 +9,6 @@ from dataclasses import dataclass
 @dataclass
 class Cryptographer:
     """A dining cryptographer"""
-    position: int
     paid: bool = False
     left_secret_bit: bool = None
     right_secret_bit: bool = None
@@ -32,7 +31,7 @@ def dining_cryptographers(n: int, payer_index: int) -> bool:
     Generate n cryptographers and run through the protocol.
     Returns true if a cryptographer paid and false if NSA paid.
     """
-    cryptographers = [Cryptographer(i) for i in range(n)]
+    cryptographers = [Cryptographer() for _ in range(n)]
 
     if 0 <= payer_index < n:
         cryptographers[payer_index].paid = True
