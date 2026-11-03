@@ -15,7 +15,7 @@ classifiers = [
 
 [project.optional-dependencies]
 dev = [
-    "pylint == 4.0.4",
+    "pylint == 4.0.9",
     "mypy == 1.19.1",
 ]
 
